@@ -3,6 +3,7 @@ import './App.css';
 import AppHeader from './components/AppHeader';
 import HeroCarousel from './components/HeroCarousel';
 import LandingHero from './components/LandingHero';
+import LandingMap from './components/LandingMap';
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
         <AppHeader/>
         <LandingHero/>
         <HeroCarousel/>
+        <LandingMap/>
       </div>
     );
   }

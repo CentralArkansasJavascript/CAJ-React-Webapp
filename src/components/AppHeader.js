@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Navbar, NavItem, Nav, MenuItem, NavDropdown } from 'react-bootstrap';
+import { Navbar, NavItem, Nav } from 'react-bootstrap';
 
 class AppHeader extends Component {
   render() {
@@ -7,7 +7,7 @@ class AppHeader extends Component {
       <Navbar inverse collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
-            <a href="#">Central Arkansas JavaScript</a>
+            <a href="#home">Central Arkansas JavaScript</a>
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>

@@ -10,3 +10,12 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.navbar, .panel {
+  border-radius: 0 !important;
+}
+
+AppFooter {
+  position:absolute !important;
+  bottom:0 !important;
+}

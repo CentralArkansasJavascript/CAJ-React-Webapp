@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import AppHeader from './components/AppHeader';
-import HeroCarousel from './components/HeroCarousel';
+import LandingCarousel from './components/LandingCarousel';
 import LandingHero from './components/LandingHero';
 import LandingMap from './components/LandingMap';
+import AppFooter from './components/AppFooter';
 
 class App extends Component {
   render() {
@@ -13,8 +14,9 @@ class App extends Component {
         </header>
         <AppHeader/>
         <LandingHero/>
-        <HeroCarousel/>
+        <LandingCarousel/>
         <LandingMap/>
+        <AppFooter/>
       </div>
     );
   }

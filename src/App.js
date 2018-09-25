@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import AppHeader from './components/AppHeader';
 import HeroCarousel from './components/HeroCarousel';
+import LandingHero from './components/LandingHero';
 
 class App extends Component {
   render() {
@@ -10,10 +11,8 @@ class App extends Component {
         <header className="App-header">
         </header>
         <AppHeader/>
+        <LandingHero/>
         <HeroCarousel/>
-        <p className="App-intro">
-          Welcome to Central Arkansas JavaScript!
-        </p>
       </div>
     );
   }

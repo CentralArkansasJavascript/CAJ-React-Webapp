@@ -15,7 +15,7 @@ class AppFooter extends Component {
           padding: "2rem"
           }}
       >
-          Central Arkansas JavaScript Footer Placeholder
+          © 2018 Copyright: Central Arkansas JavaScript
       </StickyFooter>
     );
   }

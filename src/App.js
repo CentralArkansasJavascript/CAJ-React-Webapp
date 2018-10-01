@@ -3,6 +3,7 @@ import './App.css';
 import AppHeader from './components/AppHeader';
 import LandingCarousel from './components/LandingCarousel';
 import LandingHero from './components/LandingHero';
+import MapHero from './components/MapHero';
 import LandingMap from './components/LandingMap';
 import AppFooter from './components/AppFooter';
 import * as firebase from 'firebase';
@@ -24,7 +25,7 @@ class App extends Component {
         this.state = {
         };
   }
-  
+
   render() {
     return (
       <div className="App">
@@ -33,6 +34,7 @@ class App extends Component {
         <AppHeader/>
         <LandingHero/>
         <LandingCarousel/>
+        <MapHero/>
         <LandingMap/>
         <AppFooter/>
       </div>

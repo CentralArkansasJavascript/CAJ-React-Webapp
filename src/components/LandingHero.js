@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Jumbotron, Button } from 'react-bootstrap';
+import { Jumbotron } from 'react-bootstrap';
 
 class AppHeader extends Component {
   render() {
@@ -13,7 +13,11 @@ class AppHeader extends Component {
           Each month will feature a speaker or lab or a combination of both!
         </p>
         <p>
-          <Button bsStyle="primary">Learn more</Button>
+          <div>Join our communities on Facebook
+          <a href="https://www.facebook.com/CentralArkansasJavaScript" className="fa fa-facebook"></a>
+           and Meetup
+          <a href="https://www.meetup.com/javascript-conway/" className="fa fa-meetup"></a>
+          </div>
         </p>
       </Jumbotron>
     );

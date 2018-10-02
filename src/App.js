@@ -1,15 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import AppHeader from './components/AppHeader';
-import LandingCarousel from './components/LandingCarousel';
-import LandingHero from './components/LandingHero';
-import MapHero from './components/MapHero';
-import LandingMap from './components/LandingMap';
-import AppFooter from './components/AppFooter';
 import * as firebase from 'firebase';
-import { Route, Link } from 'react-router-dom';
+import Routes from "./Routes";
 
-// Initialize Firebase
+// Initialize Firebase, I might not use it :)
 var config = {
   apiKey: "AIzaSyAOAHjXa7eB3Dt5x6W8VrvBbCHhtKx4dMw",
   authDomain: "caj-react-app.firebaseapp.com",
@@ -30,14 +24,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-        </header>
-        <AppHeader/>
-        <LandingHero/>
-        <LandingCarousel/>
-        <MapHero/>
-        <LandingMap/>
-        <AppFooter/>
+        <Routes/>
       </div>
     );
   }

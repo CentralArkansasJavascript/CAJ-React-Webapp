@@ -7,6 +7,7 @@ import MapHero from './components/MapHero';
 import LandingMap from './components/LandingMap';
 import AppFooter from './components/AppFooter';
 import * as firebase from 'firebase';
+import { Route, Link } from 'react-router-dom';
 
 // Initialize Firebase
 var config = {

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import * as firebase from 'firebase';
 import Routes from "./Routes";
+import AppHeader from './components/AppHeader';
 
 // Initialize Firebase, I might not use it :)
 var config = {
@@ -24,6 +25,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <AppHeader/>
         <Routes/>
       </div>
     );

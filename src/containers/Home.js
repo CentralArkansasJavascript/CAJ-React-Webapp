@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import '../App.css';
-import AppHeader from '../components/AppHeader';
 import LandingCarousel from '../components/LandingCarousel';
 import LandingHero from '../components/LandingHero';
 import MapHero from '../components/MapHero';
@@ -11,7 +10,6 @@ export default class Home extends Component {
   render() {
     return (
       <div className="Home">
-        <AppHeader/>
         <LandingHero/>
         <LandingCarousel/>
         <MapHero/>

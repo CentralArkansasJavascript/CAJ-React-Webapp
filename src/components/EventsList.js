@@ -13,13 +13,18 @@ class EventsList extends Component {
   }
 
   componentDidMount() {
-    fetch("https://api.meetup.com/javascript-conway/events?photo-host=public&page=20&sig_id=247671999&sig=21562be4333298a04ed26b54a186d1b224b7ecb1")
+    fetch("https://api.meetup.com/javascript-conway/events?photo-host=public&page=20&sig_id=247671999&sig=21562be4333298a04ed26b54a186d1b224b7ecb1", {
+      headers: {
+          'Access-Control-Request-Headers': '*'
+        }
+    })
       .then(res => res.json())
       .then(
+
         (result) => {
           this.setState({
             isLoaded: true,
-            items: result.items
+            items: result
           });
         },
         // Note: it's important to handle errors here

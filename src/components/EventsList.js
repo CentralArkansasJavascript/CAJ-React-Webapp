@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Jumbotron } from 'react-bootstrap';
+import { Card, CardDeck, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button, Row, Col, CardLink } from 'reactstrap';
 
 class EventsList extends Component {
 
@@ -13,7 +14,7 @@ class EventsList extends Component {
   }
 
   componentDidMount() {
-    fetch("https://api.meetup.com/javascript-conway/events?photo-host=public&page=20&sig_id=247671999&sig=21562be4333298a04ed26b54a186d1b224b7ecb1", {
+    fetch("https://api.meetup.com/2/events?offset=0&format=json&limited_events=False&group_urlname=javascript-conway&photo-host=public&page=20&fields=&order=time&desc=false&status=upcoming&sig_id=247671999&sig=aec60eed8953f85b904dfa63177e13b8ff5f32f1", {
       headers: {
           'Access-Control-Request-Headers': '*'
         }
@@ -24,7 +25,7 @@ class EventsList extends Component {
         (result) => {
           this.setState({
             isLoaded: true,
-            items: result
+            items: result.results
           });
         },
         // Note: it's important to handle errors here
@@ -48,13 +49,21 @@ class EventsList extends Component {
       return <div>Loading...</div>;
     } else {
       return (
-        <ul>
-          {items.map(item => (
-            <li key={item.name}>
-              {item.name}
-            </li>
+        <CardDeck>
+          { items.map(item => (
+            <Card>
+              <CardBody>
+                <CardTitle>{item.name}</CardTitle>
+                <CardSubtitle>Coming up on {item.time}</CardSubtitle>
+              </CardBody>
+              <CardImg src={item.photo_url} alt={item.name} />
+              <CardBody>
+                <CardText>{item.description}</CardText>
+                <CardLink href={item.link}>Check it out on Meetup!</CardLink>
+              </CardBody>
+            </Card>
           ))}
-        </ul>
+        </CardDeck>
       );
     }
   }

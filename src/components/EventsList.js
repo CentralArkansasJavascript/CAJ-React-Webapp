@@ -60,7 +60,7 @@ class EventsList extends Component {
               <CardImg src={item.photo_url} alt={item.name} />
               <CardBody>
                 <CardText dangerouslySetInnerHTML={{__html: item.description}}></CardText>
-                <CardLink href={item.link}>Check it out on Meetup!</CardLink>
+                <CardLink href={item.event_url}>Check it out on Meetup!</CardLink>
               </CardBody>
             </Card>
           ))}

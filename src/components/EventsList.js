@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardDeck, CardImg, CardText, CardBody,
+import { Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button, Row, Col, CardLink } from 'reactstrap';
 
 class EventsList extends Component {
@@ -49,7 +49,8 @@ class EventsList extends Component {
       return <div>Loading...</div>;
     } else {
       return (
-        <CardDeck>
+        <Row>
+          <Col sm="6">
           { items.map(item => (
             <Card>
               <CardBody>
@@ -58,12 +59,13 @@ class EventsList extends Component {
               </CardBody>
               <CardImg src={item.photo_url} alt={item.name} />
               <CardBody>
-                <CardText>{item.description}</CardText>
+                <CardText dangerouslySetInnerHTML={{__html: item.description}}></CardText>
                 <CardLink href={item.link}>Check it out on Meetup!</CardLink>
               </CardBody>
             </Card>
           ))}
-        </CardDeck>
+          </Col>
+        </Row>
       );
     }
   }

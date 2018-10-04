@@ -46,7 +46,7 @@ class EventsList extends Component {
         <ul>
           {items.map(item => (
             <li key={item.name}>
-              {item.name} {item.price}
+              {item.name}
             </li>
           ))}
         </ul>

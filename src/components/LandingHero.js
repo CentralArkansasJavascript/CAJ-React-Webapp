@@ -8,7 +8,7 @@ class AppHeader extends Component {
         <h1>Welcome to Central Arkansas JavaScript!</h1>
         <p>
           We are a small group of enthusiasts meeting every second Tuesday of the month at 6:30pm,
-          at the Faulkner County Library in Conway, AR.
+          at the Arkansas Regional Innovation Hub in North Little Rock.
           Come join us and share what you’re working on, or just chat and meet other JavaScript enthusiasts!
           Each month will feature a speaker or lab or a combination of both!
         </p>

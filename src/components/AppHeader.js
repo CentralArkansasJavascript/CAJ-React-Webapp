@@ -7,7 +7,7 @@ class AppHeader extends Component {
       <Navbar inverse collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
-            <a href="#home">Central Arkansas JavaScript</a>
+            <a href="/">Central Arkansas JavaScript</a>
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
@@ -19,7 +19,7 @@ class AppHeader extends Component {
             <NavItem eventKey={2} href="#">
               Resources
             </NavItem>
-            <NavItem eventKey={3} href="#">
+            <NavItem eventKey={3} href="/Events">
               Events
             </NavItem>
           </Nav>

@@ -12,12 +12,17 @@ class EventsList extends Component {
       items: []
     };
   }
-
+  // still not working, look at solutions on https://daveceddia.com/access-control-allow-origin-cors-errors-in-react-express/
   componentDidMount() {
     fetch("https://api.meetup.com/2/events?offset=0&format=json&limited_events=False&group_urlname=javascript-conway&photo-host=public&page=20&fields=&order=time&desc=false&status=upcoming&sig_id=247671999&sig=aec60eed8953f85b904dfa63177e13b8ff5f32f1", {
       headers: {
-          'Access-Control-Request-Headers': '*'
-        }
+        'Access-Control-Expose-Headers': 'X-Meetup-server, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimt-Reset',
+        'Access-Control-Allow-Origin': 'http://localhost:3000',
+        'Access-Control-Allow-Credentials': true,
+        'Access-Control-Allow-Methods': 'GET, OPTIONS',
+        'Access-Control-Max-Age': 86400
+        },
+      method:'cors'
     })
       .then(res => res.json())
       .then(

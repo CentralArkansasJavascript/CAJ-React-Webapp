@@ -76,7 +76,8 @@ class EventsList extends Component {
     } else {
       return (
         <Row>
-          <Col sm="6">
+          <Col>
+            <h2> Coming Up: </h2>
           { meetups.map(meetup => (
             <Card key={meetup.id}>
               <CardBody>
@@ -91,7 +92,8 @@ class EventsList extends Component {
             </Card>
           ))}
           </Col>
-          <Col sm="6">
+          <Col>
+          <h2> Past Events: </h2>
           { videos.map(video => (
             (video.id.videoId) ?
               <Card key={video.id.videoId}>

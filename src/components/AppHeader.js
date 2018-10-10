@@ -1,30 +1,49 @@
 import React, { Component } from 'react';
-import { Navbar, NavItem, Nav } from 'react-bootstrap';
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem } from 'reactstrap';
 
 class AppHeader extends Component {
+  constructor(props) {
+    super(props);
+
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      isOpen: false
+    };
+  }
+  toggle() {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  }
   render() {
     return (
-      <Navbar inverse collapseOnSelect>
-        <Navbar.Header>
-          <Navbar.Brand>
-            <a href="/">Central Arkansas JavaScript</a>
-          </Navbar.Brand>
-          <Navbar.Toggle />
-        </Navbar.Header>
-        <Navbar.Collapse>
-          <Nav pullRight>
-            <NavItem eventKey={1} href="#">
-              Ask Us!
-            </NavItem>
-            <NavItem eventKey={2} href="#">
-              Resources
-            </NavItem>
-            <NavItem eventKey={3} href="/Events">
-              Events
-            </NavItem>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
+      <div>
+        <Navbar color="dark" dark expand="md">
+          <NavbarBrand href="/">Central Arkansas JavaScript</NavbarBrand>
+          <NavbarToggler onClick={this.toggle} />
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className="ml-auto" navbar>
+              <NavItem>
+                <NavLink href="#">Ask Us!</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/events">Events</NavLink>
+              </NavItem>
+            </Nav>
+          </Collapse>
+        </Navbar>
+      </div>
     );
   }
 }

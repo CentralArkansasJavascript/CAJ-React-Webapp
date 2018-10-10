@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Jumbotron } from 'react-bootstrap';
+import { Jumbotron } from 'reactstrap';
 
 class AppHeader extends Component {
   render() {

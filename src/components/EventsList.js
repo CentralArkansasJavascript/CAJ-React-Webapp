@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Row, Col, CardLink } from 'reactstrap';
+  CardTitle, CardSubtitle, Row, Col, CardLink, Jumbotron } from 'reactstrap';
 import fetchJsonp from 'fetch-jsonp';
 
 class EventsList extends Component {
@@ -10,8 +10,7 @@ class EventsList extends Component {
     this.state = {
       error: null,
       isLoaded: false,
-      meetups: [],
-      videos: []
+      meetups: []
     };
   }
   componentDidMount() {
@@ -37,28 +36,6 @@ class EventsList extends Component {
           });
         }
       )
-      fetchJsonp("https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&channelId=UCs-FJXcXjQJvH69SrdobJ8g&maxResults=25&key=AIzaSyB5cEnT0NUDTzFQ7BpXAFG3Bb8uZzeRFxI")
-        .then(res => res.json())
-        .then(
-
-          (videos) => {
-            console.log(videos);
-            this.setState({
-              isLoaded: true,
-              videos: videos.items
-            });
-          },
-          // Note: it's important to handle errors here
-          // instead of a catch() block so that we don't swallow
-          // exceptions from actual bugs in components.
-          (error) => {
-            console.log(error);
-            this.setState({
-              isLoaded: true,
-              error
-            });
-          }
-        )
   }
 
   convertDate (unixDate){
@@ -80,8 +57,12 @@ class EventsList extends Component {
       return (
         <Row>
           <Col>
-            <h2> Coming Up: </h2>
-            <hr />
+          <Jumbotron>
+            <h1>Join us at our next meetup!</h1>
+            <p>
+              Each month will feature a speaker or lab or a combination of both!
+            </p>
+          </Jumbotron>
           { meetups.map(meetup => (
             <Card key={meetup.id}>
               <CardBody>
@@ -94,24 +75,6 @@ class EventsList extends Component {
                 <CardLink href={meetup.event_url} target="blank">Learn more about this event and RSVP on Meetup!</CardLink>
               </CardBody>
             </Card>
-          ))}
-          </Col>
-          <Col>
-          <h2> Past Events: </h2>
-          <hr />
-          { videos.map(video => (
-            (video.id.videoId) ?
-              <Card key={video.id.videoId}>
-                <CardBody>
-                  <CardTitle>{video.snippet.title}</CardTitle>
-                </CardBody>
-                <iframe title={video.snippet.title} allowFullScreen={true} src={'https://www.youtube.com/embed/' + video.id.videoId}>
-                </iframe>
-                <CardBody>
-                  <CardText>{video.snippet.description}</CardText>
-                </CardBody>
-              </Card>
-            : null
           ))}
           </Col>
         </Row>

@@ -35,7 +35,10 @@ class AppHeader extends Component {
                 <NavLink href="#">Ask Us!</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/events">Events</NavLink>
+                <NavLink href="/Events">Coming Up</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/PastEvents">Past Events</NavLink>
               </NavItem>
             </Nav>
           </Collapse>

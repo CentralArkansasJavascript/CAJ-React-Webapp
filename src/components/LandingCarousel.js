@@ -1,31 +1,41 @@
 import React, { Component } from 'react';
-import { Carousel } from 'react-bootstrap';
+import CodeImage from '../assets/codes.jpg';
+import FrameworksImage from '../assets/frameworks.png';
+import CodeInstructionImage from '../assets/code-instruction.jpg';
+import LaptopCodeImage from '../assets/laptop-code.jpg';
+
+import { UncontrolledCarousel } from 'reactstrap';
+
+const items = [
+  {
+    src:FrameworksImage,
+    altText: 'Code Image',
+    caption: "Hear speakers present about the latest frameworks and topics!",
+    header: 'Join'
+  },
+  {
+    src:CodeInstructionImage,
+    altText: 'Code Instruction Image',
+    caption: 'Get advice from other enthusiasts!',
+    header: 'Learn'
+  },
+  {
+    src:LaptopCodeImage,
+    altText: 'Laptop Code Image',
+    caption: 'Share your latest project!',
+    header: 'Share'
+  }
+];
 
 class HeroCarousel extends Component {
+
   render() {
+
     return (
-      <Carousel>
-        <Carousel.Item >
-          <img width={'100%'} height={500} alt="javascript-code" src={require('../assets/codes.jpg')} />
-          <Carousel.Caption>
-            <h3>Learn and share new frameworks and technologies!</h3>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item >
-          <img width={'100%'} height={500} alt="code-placeholder-2" src={require('../assets/code-instruction.jpg')} />
-          <Carousel.Caption>
-            <h3>Meet other enthusiasts in the area!</h3>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item >
-          <img width={'100%'} height={500} alt="code-placeholder-3" src={require('../assets/laptop-code.jpg')} />
-          <Carousel.Caption>
-            <h3>Present a topic you have been working on!</h3>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
+      <UncontrolledCarousel autoPlay={false} items={items} />
     );
   }
 }
+
 
 export default HeroCarousel;

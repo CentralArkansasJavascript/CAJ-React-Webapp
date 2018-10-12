@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import '../App.css';
-import PastEventsList from '../components/PastEventsList';
+import Discussions from '../components/Discussions';
 import AppFooter from '../components/AppFooter';
 
-export default class PastEvents extends Component {
+export default class AskUs extends Component {
   render() {
     return (
-      <div className="PastEvents">
-        <PastEventsList/>
+      <div className="AskUs">
+        <Discussions/>
         <AppFooter/>
       </div>
     );

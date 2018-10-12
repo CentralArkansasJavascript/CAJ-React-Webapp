@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardTitle, CardText, CardBody, Row, Col, CardLink, Jumbotron } from 'reactstrap';
+import { Card, CardTitle, CardText, CardBody, Row, Col, Jumbotron } from 'reactstrap';
 import fetchJsonp from 'fetch-jsonp';
 
 class PastEventsList extends Component {
@@ -48,7 +48,7 @@ class PastEventsList extends Component {
   }
 
   render() {
-    const { error, isLoaded, meetups, videos } = this.state;
+    const { error, isLoaded, videos } = this.state;
     if (error) {
       return <div><h2>Error: {error.message}</h2></div>;
     } else if (!isLoaded) {

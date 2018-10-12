@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import CodeImage from '../assets/codes.jpg';
 import FrameworksImage from '../assets/frameworks.png';
 import CodeInstructionImage from '../assets/code-instruction.jpg';
 import LaptopCodeImage from '../assets/laptop-code.jpg';

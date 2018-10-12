@@ -32,7 +32,7 @@ class AppHeader extends Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="#">Ask Us!</NavLink>
+                <NavLink href="/AskUs">Ask Us!</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="/Events">Coming Up</NavLink>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardText, CardBody,
+import { Card, CardText, CardBody,
   CardTitle, CardSubtitle, Row, Col, CardLink, Jumbotron } from 'reactstrap';
 import fetchJsonp from 'fetch-jsonp';
 
@@ -48,7 +48,7 @@ class EventsList extends Component {
   }
 
   render() {
-    const { error, isLoaded, meetups, videos } = this.state;
+    const { error, isLoaded, meetups } = this.state;
     if (error) {
       return <div><h2>Error: {error.message}</h2></div>;
     } else if (!isLoaded) {

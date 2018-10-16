@@ -69,3 +69,12 @@ body {
 .card > iframe {
   min-height: 300px;
 }
+
+.Home, .AskUs, .Events, .PastEvents {
+  margin-left: 1.0em;
+  margin-right: 1.0em;
+}
+
+a:hover {
+  text-decoration: none;
+}

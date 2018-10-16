@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardText, CardBody,
+import { Card, CardText, CardBody,
   CardTitle, CardSubtitle, Row, Col, CardLink, Jumbotron } from 'reactstrap';
 import fetchJsonp from 'fetch-jsonp';
 
@@ -48,9 +48,21 @@ class EventsList extends Component {
   }
 
   render() {
-    const { error, isLoaded, meetups, videos } = this.state;
+    const { error, isLoaded, meetups } = this.state;
     if (error) {
-      return <div><h2>Error: {error.message}</h2></div>;
+      return
+      <div>
+        <h2 style="display:none">Error: {error.message}</h2>
+        <Card>
+          <CardBody>
+            <CardTitle>AAAHHHH!!!!</CardTitle>
+            <CardSubtitle>There was an error fetching our events! We will be contacting the monkeys responsible ASAP.</CardSubtitle>
+          </CardBody>
+          <CardBody>
+            <CardLink href="https://www.meetup.com/javascript-conway/" target="blank">In the meantime try visiting Meetup directly!</CardLink>
+          </CardBody>
+        </Card>
+      </div>;
     } else if (!isLoaded) {
       return <div>Loading...</div>;
     } else {
@@ -59,6 +71,8 @@ class EventsList extends Component {
           <Col>
           <Jumbotron>
             <h1>Join us at our next meetup!</h1>
+            <hr/>
+
             <p>
               Each month will feature a speaker or lab or a combination of both!
             </p>

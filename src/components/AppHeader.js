@@ -23,6 +23,8 @@ class AppHeader extends Component {
       isOpen: !this.state.isOpen
     });
   }
+
+
   render() {
     return (
       <div>
@@ -32,7 +34,7 @@ class AppHeader extends Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="#">Ask Us!</NavLink>
+                <NavLink href="/AskUs">Ask Us!</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="/Events">Coming Up</NavLink>
@@ -40,6 +42,8 @@ class AppHeader extends Component {
               <NavItem>
                 <NavLink href="/PastEvents">Past Events</NavLink>
               </NavItem>
+              <a href="https://www.facebook.com/CentralArkansasJavaScript" className="fa fa-facebook"></a>
+              <a href="https://www.meetup.com/javascript-conway/" className="fa fa-meetup"></a>
             </Nav>
           </Collapse>
         </Navbar>

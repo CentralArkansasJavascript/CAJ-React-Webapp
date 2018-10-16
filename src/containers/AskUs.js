@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import '../App.css';
-import EventsList from '../components/EventsList';
+import Discussions from '../components/Discussions';
 import AppFooter from '../components/AppFooter';
 
-export default class Events extends Component {
+export default class AskUs extends Component {
   render() {
     return (
-      <div className="Events">
-        <EventsList/>
+      <div className="AskUs">
+        <Discussions/>
         <AppFooter/>
       </div>
     );

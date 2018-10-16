@@ -6,6 +6,8 @@ class MapHero extends Component {
     return (
       <Jumbotron>
         <h2>Join us at the Innovation Hub for our next event!</h2>
+        <hr/>
+
       </Jumbotron>
     );
   }

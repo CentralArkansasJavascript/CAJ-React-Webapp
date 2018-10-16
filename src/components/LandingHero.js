@@ -6,6 +6,8 @@ class AppHeader extends Component {
     return (
       <Jumbotron>
         <h1>Welcome to Central Arkansas JavaScript!</h1>
+        <hr/>
+
         <p>
           We are a small group of enthusiasts meeting every first Wednesday of the month at 6:30pm,
           at the Arkansas Regional Innovation Hub in North Little Rock.
@@ -13,10 +15,7 @@ class AppHeader extends Component {
           Each month will feature a speaker or lab or a combination of both!
         </p>
         <p>
-          Join our communities on Facebook
-          <a href="https://www.facebook.com/CentralArkansasJavaScript" className="fa fa-facebook"></a>
-           and Meetup
-          <a href="https://www.meetup.com/javascript-conway/" className="fa fa-meetup"></a>
+          Join our communities on <a href="https://www.facebook.com/CentralArkansasJavaScript">Facebook</a> and <a href="https://www.meetup.com/javascript-conway/">Meetup</a>!
         </p>
       </Jumbotron>
     );

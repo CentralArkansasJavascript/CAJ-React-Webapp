@@ -52,7 +52,7 @@ class EventsList extends Component {
     if (error) {
       return (
       <div>
-        <h2 style={'display:none'}>Error: {error.message}</h2>
+        <h2 style={{display:'none'}}>Error: {error.message}</h2>
         <Card>
           <CardBody>
             <CardTitle>AAAHHHH!!!!</CardTitle>

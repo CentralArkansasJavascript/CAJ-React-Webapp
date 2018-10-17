@@ -45,8 +45,8 @@ class AppHeader extends Component {
               <NavItem>
                 <NavLink href="/Resources">Resources</NavLink>
               </NavItem>
-              <a href="https://www.facebook.com/CentralArkansasJavaScript" className="fa fa-facebook"></a>
-              <a href="https://www.meetup.com/javascript-conway/" className="fa fa-meetup"></a>
+              <a href="https://www.facebook.com/CentralArkansasJavaScript" className="fa fa-facebook" target='blank'></a>
+              <a href="https://www.meetup.com/javascript-conway/" className="fa fa-meetup" target='blank'></a>
             </Nav>
           </Collapse>
         </Navbar>

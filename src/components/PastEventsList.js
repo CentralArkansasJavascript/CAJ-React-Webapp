@@ -50,24 +50,26 @@ class PastEventsList extends Component {
   render() {
     const { error, isLoaded, videos } = this.state;
     if (error) {
-      return
-      <div>
-        <h2 hidden>Error: {error.message}</h2>
+      return (
         <div>
-          <h2 style="display:none">Error: {error.message}</h2>
-          <Card>
-            <CardBody>
-              <CardTitle>AAAHHHH!!!!</CardTitle>
-              <CardSubtitle>There was an error fetching our events! We will be contacting the monkeys responsible ASAP.</CardSubtitle>
-            </CardBody>
-            <CardBody>
-              <CardLink href="" target="blank">In the meantime try visiting Meetup directly!</CardLink>
-            </CardBody>
-          </Card>
-        </div>;
-      </div>;
+          <h2 hidden>Error: {error.message}</h2>
+          <div>
+            <h2 style={{display:"none"}}>Error: {error.message}</h2>
+            <Card>
+              <CardBody>
+                <CardTitle>AAAHHHH!!!!</CardTitle>
+                <CardSubtitle>There was an error fetching our events! We will be contacting the monkeys responsible ASAP.</CardSubtitle>
+              </CardBody>
+              <CardBody>
+                <CardLink href="" target="blank">In the meantime try visiting Meetup directly!</CardLink>
+              </CardBody>
+            </Card>
+          </div>
+        </div>
+      );
+
     } else if (!isLoaded) {
-      return <div>Loading...</div>;
+      return (<div>Loading...</div>);
     } else {
       return (
         <Row>

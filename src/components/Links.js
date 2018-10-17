@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Card, CardDeck, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Row, Col, CardLink, Jumbotron, Button } from 'reactstrap';
-import * as firebase from 'firebase';
+import { Card, CardImg, CardBody,
+  CardTitle, CardText, Row, Col, Jumbotron, } from 'reactstrap';
+import firebase from "firebase";
 
   // Initialize Firebase, I might not use it :)
   var config = {
@@ -49,10 +49,10 @@ class Links extends Component {
             </p>
           </Jumbotron>
           { links.map(link => (
-            <Card>
+            <Card key={link.id}>
               <CardBody>
                 <CardTitle>{link.title}</CardTitle>
-                <CardSubtitle>{link.description}</CardSubtitle>
+                <CardText>{link.description}</CardText>
               </CardBody>
               <a href={link.url} target="blank">
                 <CardImg src={link.image} alt={link.title} />

@@ -50,9 +50,9 @@ class EventsList extends Component {
   render() {
     const { error, isLoaded, meetups } = this.state;
     if (error) {
-      return
+      return (
       <div>
-        <h2 style="display:none">Error: {error.message}</h2>
+        <h2 style={{display:'none'}}>Error: {error.message}</h2>
         <Card>
           <CardBody>
             <CardTitle>AAAHHHH!!!!</CardTitle>
@@ -62,9 +62,10 @@ class EventsList extends Component {
             <CardLink href="https://www.meetup.com/javascript-conway/" target="blank">In the meantime try visiting Meetup directly!</CardLink>
           </CardBody>
         </Card>
-      </div>;
+      </div>
+    );
     } else if (!isLoaded) {
-      return <div>Loading...</div>;
+      return (<div>Loading...</div>);
     } else {
       return (
         <Row>

@@ -44,18 +44,18 @@ body {
 }
 
 .jumbotron > p {
-  margin: 1.5em;
+  margin: 3px;
 }
 
 .jumbotron > h1 {
-  margin: 1em;
+  margin: 5px;
 }
 .jumbotron > h2 {
-  margin: 1em;
+  margin: 5px;
 }
 
 .jumbotron {
-  margin-top: 1.0em;
+  margin-top: 5px;
 }
 
 .card {
@@ -63,7 +63,7 @@ body {
   margin-top: 1.0em;
   margin-left:auto;
   margin-right:auto;
-  width: 500px;
+  width: 50%;
   text-align: left;
 }
 
@@ -71,9 +71,12 @@ body {
   min-height: 300px;
 }
 
-.Home, .AskUs, .Events, .PastEvents {
-  margin-left: 1.0em;
-  margin-right: 1.0em;
+.card-img {
+  padding:5px;
+}
+.Home, .AskUs, .Events, .PastEvents, .Resources {
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 a:hover {

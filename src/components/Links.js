@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Card, CardText, CardBody,
   CardTitle, CardSubtitle, Row, Col, CardLink, Jumbotron } from 'reactstrap';
+import * as firebase from 'firebase';
 
   // Initialize Firebase, I might not use it :)
   var config = {
@@ -13,43 +14,42 @@ import { Card, CardText, CardBody,
   };
   firebase.initializeApp(config);
 
+  const db = firebase.firestore();
+  const settings = {timestampsInSnapshots: true};
+  db.settings(settings);
+
 class Links extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
+      links: []
     };
   }
   componentDidMount() {
-
+    db.collection("links").get().then((linkSnapshot) => {
+        linkSnapshot.forEach((link) => {
+            let data = link.data();
+            data.id = link.id;
+            this.setState({ links: this.state.links.concat( data ) });
+        });
+    });
   }
 
   render() {
-    const { } = this.state;
+    const { links } = this.state;
       return (
         <Row>
           <Col>
           <Jumbotron>
-            <h1>Join us at our next meetup!</h1>
+            <h1>Hungry for more?</h1>
             <hr/>
 
             <p>
-              Each month will feature a speaker or lab or a combination of both!
+              Below are some helpful resources to guide you on your journey!
             </p>
           </Jumbotron>
-          { meetups.map(meetup => (
-            <Card key={meetup.id}>
-              <CardBody>
-                <CardTitle>{meetup.name}</CardTitle>
-                <CardSubtitle>Coming up on {this.convertDate(meetup.time)}</CardSubtitle>
-              </CardBody>
-              <iframe title="innovation-hub-map" style={{ height: '100%', width: '100%', border:0}} src="https://www.google.com/maps/embed/v1/place?q=Arkansas%20Regional%20Innovation%20Hub%2C%20East%20Broadway%20Street%2C%20North%20Little%20Rock%2C%20AR%2C%20USA&key=AIzaSyAwTLE8hr4J66ZjRA7WVGIKTCW_9nbSarg" allowFullScreen></iframe>
-              <CardBody>
-                <CardText dangerouslySetInnerHTML={{__html: meetup.description}}></CardText>
-                <CardLink href={meetup.event_url} target="blank">Learn more about this event and RSVP on Meetup!</CardLink>
-              </CardBody>
-            </Card>
-          ))}
+
           </Col>
         </Row>
 

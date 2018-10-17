@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Card, CardText, CardBody,
-  CardTitle, CardSubtitle, Row, Col, CardLink, Jumbotron } from 'reactstrap';
+import { Card, CardDeck, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Row, Col, CardLink, Jumbotron, Button } from 'reactstrap';
 import * as firebase from 'firebase';
 
   // Initialize Firebase, I might not use it :)
@@ -44,12 +44,21 @@ class Links extends Component {
           <Jumbotron>
             <h1>Hungry for more?</h1>
             <hr/>
-
             <p>
               Below are some helpful resources to guide you on your journey!
             </p>
           </Jumbotron>
-
+          { links.map(link => (
+            <Card>
+              <CardBody>
+                <CardTitle>{link.title}</CardTitle>
+                <CardSubtitle>{link.description}</CardSubtitle>
+              </CardBody>
+              <a href={link.url} target="blank">
+                <CardImg src={link.image} alt={link.title} />
+              </a>
+            </Card>
+          ))}
           </Col>
         </Row>
 

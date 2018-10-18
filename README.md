@@ -40,4 +40,4 @@ This react web application was created with the intent to serve as way for membe
     reactstrap: ^6.5.0
     
 ## About Us
-We are a small group of enthusiasts meeting every second Tuesday of the month at 6:30pm, at the Faulkner County Library in Conway, AR. Come join us and share what you’re working on, or just chat and meet other JavaScript enthusiasts! Each month will feature a speaker or lab or a combination of both!
+We are a small group of enthusiasts meeting every first Wednesday of the month at 6:30pm, at the [Arkansas Regional Innovation Hub](https://arhub.org/). Come join us and share what you’re working on, or just chat and meet other JavaScript enthusiasts! Each month will feature a speaker or lab or a combination of both!

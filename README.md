@@ -5,6 +5,7 @@ This react web application was created with the intent to serve as way for membe
 
 ## Table of Contents
 - [Getting Started](#getting-started)
+- [How to Deploy](#to-deploy-with-firebase)
 - [Dependencies](#dependencies)
 - [About Us](#about-us)
 
@@ -12,7 +13,16 @@ This react web application was created with the intent to serve as way for membe
 - Install the latest version of node
 - Install the latest version of npm
 - clone this repository
-- in the directory you cloned it to, type the command `npm start` to start the test server
+- in your terminal cd into the directory you cloned to, type `npm install` to ensure all dependencies are installed
+- in the directory you cloned to, type the command `npm start` to start the test server
+
+## To Deploy with Firebase
+- `npm install -g firebase-tools` to install the firebase cli
+- `firebase init` If you have not done this already
+- `firebase login` and enter your credentials, and set the correct production build directory
+- `npm run build` to compile code for production (will be into `build` folder)
+- `firebase deploy` to deploy.
+[See more info here](https://firebase.google.com/docs/cli/)
 
 ## Dependencies
 

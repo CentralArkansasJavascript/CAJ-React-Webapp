@@ -4,18 +4,18 @@ import LandingCarousel from '../components/LandingCarousel';
 import LandingHero from '../components/LandingHero';
 import MapHero from '../components/MapHero';
 import LandingMap from '../components/LandingMap';
-import AppFooter from '../components/AppFooter';
-
+import PageTemplate from "../containers/PageTemplate";
 export default class Home extends Component {
   render() {
     return (
-      <div className="Home">
-        <LandingHero/>
-        <LandingCarousel/>
-        <MapHero/>
-        <LandingMap/>
-        <AppFooter/>
-      </div>
+      <PageTemplate>
+        <div className="Home">
+          <LandingHero/>
+          <LandingCarousel/>
+          <MapHero/>
+          <LandingMap/>
+        </div>
+      </PageTemplate>
     );
   }
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Routes from "./Routes";
-import AppHeader from './components/AppHeader';
+
 
 class App extends Component {
   constructor(props) {
@@ -13,7 +13,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <AppHeader/>
         <Routes/>
       </div>
     );

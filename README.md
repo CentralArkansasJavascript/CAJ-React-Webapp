@@ -1,43 +1,46 @@
-# Central Arkansas JavaScript React WebApp
-This react web application was created with the intent to serve as way for members to find out about our group and events.
+# Getting Started with Create React App
 
-[This app is currently deployed here.](https://caj-react-app.firebaseapp.com)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Table of Contents
-- [Getting Started](#getting-started)
-- [How to Deploy](#to-deploy-with-firebase)
-- [Dependencies](#dependencies)
-- [About Us](#about-us)
+## Available Scripts
 
-## Getting started
-- Install the latest version of node
-- Install the latest version of npm
-- clone this repository
-- in your terminal cd into the directory you cloned to, type `npm install` to ensure all dependencies are installed
-- in the directory you cloned to, type the command `npm start` to start the test server
+In the project directory, you can run:
 
-## To Deploy with Firebase
-- `npm install -g firebase-tools` to install the firebase cli
-- `firebase init` If you have not done this already
-- `firebase login` and enter your credentials, and set the correct production build directory
-- `npm run build` to compile code for production (will be into `build` folder)
-- `firebase deploy` to deploy.
-[See more info here](https://firebase.google.com/docs/cli/)
+### `npm start`
 
-## Dependencies
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-    axios: ^0.18.0,
-    bootstrap: ^4.1.3,
-    disqus-react: ^1.0.5,
-    fetch-jsonp: ^1.1.3,
-    firebase: ^5.5.1,
-    react: ^16.5.2,
-    react-dom: ^16.5.2,
-    react-router-bootstrap: ^0.24.4,
-    react-router-dom: ^4.3.1,
-    react-scripts: 1.1.5,
-    react-sticky-footer: 0.1.0-rc3,
-    reactstrap: ^6.5.0
-    
-## About Us
-We are a small group of enthusiasts meeting every first Wednesday of the month at 6:30pm, at the [Arkansas Regional Innovation Hub](https://arhub.org/). Come join us and share what you’re working on, or just chat and meet other JavaScript enthusiasts! Each month will feature a speaker or lab or a combination of both!
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).

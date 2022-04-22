@@ -1,0 +1,56 @@
+@use "include-media";
+@import "../node_modules/bootstrap/scss/bootstrap";
+// @use "node_modules/bootstrap/scss/functions";
+// @use "node_modules/bootstrap/scss/variables";
+// @use "node_modules/bootstrap/scss/mixins";
+// @use "node_modules/bootstrap/scss/mixins/breakpoints";
+
+// body 
+// {
+//   margin: 0;
+//   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+//     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+//     sans-serif;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+// }
+
+// code {
+//   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+//     monospace;
+// }
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+html {
+  font-size: 1rem;
+  background-image: url("./caj-bg.png");
+  background-repeat: repeat;
+}
+.App-header{
+
+  background-image: url("./caj-bg.png");
+  background-repeat: repeat;
+}
+
+.logo-text {
+
+  font-family: 'Bebas Neue', cursive;
+}
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 1.2rem;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 1.4rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 1.6rem;
+  }
+} 
+
